@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: MBA_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/MBA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MBA/MBA_{{ version }}.tar.gz
@@ -15,8 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1004
-  skip: true  # [win32]
+  number: 1005
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,7 +36,7 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-bh
+    #- r-bh
 
 test:
   commands:
@@ -47,7 +45,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=MBA
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: "Functions to interpolate irregularly and regularly spaced data using Multilevel B-spline
     Approximation (MBA). Functions call portions of the SINTEF Multilevel B-spline Library
     written by \xD8yvind Hjelle which implements methods developed by Lee, Wolberg and
@@ -58,9 +56,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
