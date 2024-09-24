@@ -1,4 +1,4 @@
-{% set version = "0.1-1" %}
+{% set version = "0.1-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MBA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MBA/MBA_{{ version }}.tar.gz
-  sha256: a22fec16f47f096ddaab2e3a50e1a7378c06f04db26b2c915546a2432d97de9b
+  sha256: a5b5a1b47fa7bea3c2ca54a447ac3d55ceff7fa894fc2caca462928a79f24e92
 
 build:
   number: 0
