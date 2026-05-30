@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mba-feedstock
 About r-mba
 -----------
 
-Home: https://CRAN.R-project.org/package=MBA
+Home: https://finleya.github.io/MBA/
 
 Package license: GPL-2.0-or-later
 
 Summary: Functions to interpolate irregularly and regularly spaced data using Multilevel B-spline Approximation (MBA). Functions call portions of the SINTEF Multilevel B-spline Library written by Øyvind Hjelle which implements methods developed by Lee, Wolberg and Shin (1997; <doi:10.1109/2945.620490>).
+
+Development: https://github.com/finleya/MBA
 
 About r-mba
 -----------
 
-Home: https://CRAN.R-project.org/package=MBA
+Home: https://finleya.github.io/MBA/
 
 Package license: GPL-2.0-or-later
 
 Summary: Functions to interpolate irregularly and regularly spaced data using Multilevel B-spline Approximation (MBA). Functions call portions of the SINTEF Multilevel B-spline Library written by Øyvind Hjelle which implements methods developed by Lee, Wolberg and Shin (1997; <doi:10.1109/2945.620490>).
+
+Development: https://github.com/finleya/MBA
 
 Current build status
 ====================
