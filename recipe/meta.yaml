@@ -1,21 +1,25 @@
-{% set version = "0.1-2" %}
+{% set version = "0.1-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-mba
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/MBA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MBA/MBA_{{ version }}.tar.gz
-  sha256: a5b5a1b47fa7bea3c2ca54a447ac3d55ceff7fa894fc2caca462928a79f24e92
+  sha256: 2364423530dc707cf985ec373ff9a0b52c656b72f718299b419967c192f742b2
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -44,7 +48,8 @@ test:
     - "\"%R%\" -e \"library('MBA')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=MBA
+  home: https://finleya.github.io/MBA/
+  dev_url: https://github.com/finleya/MBA
   license: GPL-2.0-or-later
   summary: Functions to interpolate irregularly and regularly spaced data using Multilevel B-spline Approximation (MBA). Functions call portions of the SINTEF Multilevel B-spline Library written by Øyvind Hjelle which implements methods developed by Lee, Wolberg and Shin (1997; <doi:10.1109/2945.620490>).
   license_family: GPL3
